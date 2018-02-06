@@ -56,4 +56,6 @@ The Task and its steps are summarized in the following image. When you're ready,
 
 ### The Custom Inventory Rule
 
-4. Go to _Inventory_, then go to _Software_  and create a **New Software entry** (_Choose Action / New_)
+4. In the K100 Dashboard, now go to _Inventory_, then go to _Software Inventory_  and create a **new Software entry** (_Choose Action / New_)
+
+...read more tomorrow :smile:
