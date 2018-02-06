@@ -19,3 +19,7 @@ The script is independent by K1000, so if you don't have KACE SMA in your enviro
 ## Setup
 
 Edit [the script](smartcard.vbs) **line 4** with a path where you want to save the output file. In our environment every PC has a _"C:\Tools"_ directory for service purpose, so i decided to save the output there.
+
+```vbs
+Set f = log.CreateTextFile("C:\Tools\smartcard.txt", 2)
+```
