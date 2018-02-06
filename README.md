@@ -18,7 +18,8 @@ The script does not depend by K1000, so if you don't have KACE SMA in your envir
 
 ## Setup
 
-1. Edit [the script](smartcard.vbs) **line 4** with a path where you want to save the output file. In our environment every PC has a _"C:\Tools"_ directory for service purpose, so i decided to save the output there.
+### The KScript
+1. Edit [the script](smartcard.vbs) **line 4** with the path where you want to save the output file. In our environment every PC has a _"C:\Tools"_ directory for service purpose, so i decided to save the output there.
 
 ```vbs
 Set f = log.CreateTextFile("C:\Tools\smartcard.txt", 2)
@@ -47,6 +48,12 @@ We want the script to run once in every PC, so we'll use a "checkmark" (the smar
     * Directory: **C:\Tools**
     * File: **smartcard.txt**
 
-...and Save your brand new script
+...and **Save** your brand new script.
+
+The Task and its steps are summarized in the following image. When you're ready, let's jump to the [Step 4!](#the-custom-inventory-rule)
 
 ![Screenshot 1](assets/screenshot1.png)
+
+### The Custom Inventory Rule
+
+4. Go to _Inventory_, then go to _Software_  and create a **New Software entry** (_Choose Action / New_)
