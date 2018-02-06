@@ -27,13 +27,13 @@ Set f = log.CreateTextFile("C:\Tools\smartcard.txt", 2)
 
 3. Name the script at your wish (for example: Check Smart Card Reader) and follow the following steps
 
-### Basic Settings
+#### Script Basic Settings
 * Type: **Online KScript**
 * Enabled: **Yes**
 * Windows Run As: **Local System**
 * Upload the smartcard.vbs as **New Dependecy**
 
-### Tasks
+#### Tasks
 We want the script run once in every PC, so we'll use a "checkmark" (the smartcard.txt) to verify that...
 
 * Verify: **Verify a file exists...**
