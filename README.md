@@ -48,7 +48,9 @@ We want the script to run once in every PC, so we'll use a "checkmark" (the smar
     * Directory: **C:\Tools**
     * File: **smartcard.txt**
 
-...and **Save** your brand new script. See all the Tasks in the following image. When you're ready, let's jump to the [Step 4!](#the-custom-inventory-rule)
+...and **Save** your brand new script.
+
+The Task and its steps are summarized in the following image. When you're ready, let's jump to the [Step 4!](#the-custom-inventory-rule)
 
 ![Screenshot 1](assets/screenshot1.png)
 
