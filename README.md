@@ -9,4 +9,3 @@ Finds and report all managed Windows PCs in K1000 Inventory with a smartcard rea
 
 ## Overview
 The script is independent by K1000, so if you don't have KACE SMA in your environment don't worry: the script is still useful!
-
