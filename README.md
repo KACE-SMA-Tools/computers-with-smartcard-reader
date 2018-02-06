@@ -31,6 +31,7 @@ Set f = log.CreateTextFile("C:\Tools\smartcard.txt", 2)
 * Type: **Online KScript**
 * Enabled: **Yes**
 * Windows Run As: **Local System**
+* Apply to: one or some devices, all devices or to a Device Label, according to your needs in your environment
 * Upload the smartcard.vbs as **New Dependecy**
 
 #### Tasks
@@ -46,6 +47,6 @@ We want the script to run once in every PC, so we'll use a "checkmark" (the smar
     * Directory: **C:\Tools**
     * File: **smartcard.txt**
 
-...and Save you brand new script
+...and Save your brand new script
 
 ![Screenshot 1](assets/screenshot1.png)
