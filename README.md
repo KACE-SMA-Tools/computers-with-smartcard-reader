@@ -31,8 +31,8 @@ Set f = log.CreateTextFile("C:\Tools\smartcard.txt", 2)
 #### Script Basic Settings
 * Type: **Online KScript**
 * Enabled: **Yes**
+* Deploy: one or some devices, all devices or to a Device Label, according to your needs in your environment
 * Windows Run As: **Local System**
-* Apply to: one or some devices, all devices or to a Device Label, according to your needs in your environment
 * Upload the smartcard.vbs as **New Dependecy**
 
 #### Tasks
@@ -56,6 +56,14 @@ The Task and its steps are summarized in the following image. When you're ready,
 
 ### The Custom Inventory Rule
 
-4. In the K100 Dashboard, now go to _Inventory_, then go to _Software Inventory_  and create a **new Software entry** (_Choose Action / New_)
+1. In the K100 Dashboard, now go to _Inventory_, then go to _Software_  and create a **new Software entry** (_Choose Action / New_)
 
-...read more tomorrow :smile:
+2. Name the rule as your wish (for example: IT Dep - Check Smart Card Reader) and follow these steps:
+
+* Publisher: **IT Department** (it's useful for further searches into the _Software Inventory_)
+* Supported Operating Systems: **All the Windows OSs in your Inventory**
+* Custom Inventory Rule: `ShellCommandTextReturn(cmd /c type C:\Tools\smartcard.txt)`
+
+and **Save** your new Custom Inventory Rule
+
+![Screenshot 1](assets/screenshot2.png)
