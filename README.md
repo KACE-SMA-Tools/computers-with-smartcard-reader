@@ -17,7 +17,7 @@ The script does not depend on K1000, so if you don't have KACE SMA in your envir
 1. The vbs script executes a WMI query over the target device(s) and saves an output file named _smartcard.txt_ (see below in the [Setup section](#setup))
 2. The vbs script is scheduled and deployed to the target device(s) via K1000 [_Online KScript_](#the-kscript)
 3. A K1000 [_Custom Inventory Rule_](#the-custom-inventory-rule) reads the output file for every inventoried device and stores the information in the database
-4. A scheduled Report (choose your favorite format between HTML, CSV, PDF or Excel) returns only PCs with a smart card reader installed
+4. A scheduled [Report](#the-report) (choose your favorite format between HTML, CSV, PDF or Excel) returns only PCs with a smart card reader installed
 5. Done!
 
 ## Setup
@@ -64,7 +64,7 @@ The Task and its steps are summarized in the following image. When you're ready,
 
 ### The Custom Inventory Rule
 
-1. In the K100 Dashboard, now go to _Inventory_, then go to _Software_  and create a **new Software entry** (_Choose Action / New_)
+1. In the K100 Dashboard, now go to _Inventory_ section, then go to _Software_  and create a **new Software entry** (_Choose Action / New_)
 
 2. Name the rule as your wish (for example: IT Dep - Check Smart Card Reader) and follow these steps:
 
@@ -75,6 +75,44 @@ The Task and its steps are summarized in the following image. When you're ready,
 ...and **Save** your new Custom Inventory Rule.
 
 Here's the summary image
+
 ![Screenshot 1](assets/screenshot2.png)
 
-...[...]...
+Now we need all our devices complete their inventory. The new Custom Inventory Rule creates a new entry in every device record managed by the K1000. 
+
+If a smart card reader has been discovered we'll have at least one "DeviceClass: SMARTCARDREADER" text iside the **Custom Inventory Fields** section into every device record in _Inventory / Devices_
+
+![Screenhot 3](assets/screenshot3.png)
+
+Otherwise, if a smart card reader has not been discovered, we'll have no text
+
+When all your devices has been inventoried and you're ready, jump to the [next section](#the-report)
+
+### The Report
+
+In the K100 Dashboard, now go to _Reporting_ section, then in _Reports_ and create a new Report (_Choose Action / New_)
+
+Name the Report as your wish (for example: PCs with Smart Card Reader) and follow these steps:
+
+#### Title and Topic
+
+* Category: **Inventory**
+* Topic: **Device**
+
+#### Fields to Display
+
+* Device: **System Name**
+* Operating System Info: **Name**
+* User Information: **User Name**
+* Manufacturer and BIOS: **System Model**
+
+Feel free to add and modify any other field, according to your needings.
+
+#### Filters
+
+Delete the default filter and create this:
+
+![Filter](assets/report1.png)
+
+and **Save** your new report.
+
