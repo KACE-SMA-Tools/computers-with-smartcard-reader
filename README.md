@@ -11,7 +11,6 @@ The script does not depend on K1000, so if you don't have KACE SMA in your envir
 * [The Query] This script :innocent:
 * [The Automation] Kace Systems Management Appliance (AKA 'K1000')
 
-
 ## How it works
 
 1. The vbs script executes a WMI query over the target device(s) and saves an output file named _smartcard.txt_ (see below in the [Setup section](#setup))
@@ -24,7 +23,7 @@ The script does not depend on K1000, so if you don't have KACE SMA in your envir
 
 ### The KScript
 
-1. Edit [the script](smartcard.vbs) **line 4** with the path where you want to save the output file. In our environment every PC has a _"C:\Tools"_ directory for service purpose, so i decided to save the output there.
+1. Edit [the script](smartcard.vbs) **line 4** with the path where you want to save the output file. In our environment every PC has a _“C:\Tools”_ directory for service purpose, so I decided to save the output there.
 
 ```vbs
 Set f = log.CreateTextFile("C:\Tools\smartcard.txt", 2)
@@ -44,7 +43,7 @@ Set f = log.CreateTextFile("C:\Tools\smartcard.txt", 2)
 
 #### Tasks
 
-We want the script to run once in every PC, so we'll use a "checkmark" (the smartcard.txt) to verify that...
+We want the script to run once in every PC, so we'll use a “checkmark” (the smartcard.txt) to verify that...
 
 * Verify: **Verify a file exists...**
     * C:\Tools\smartcard.txt
@@ -64,9 +63,9 @@ The Task and its steps are summarized in the following image. When you're ready,
 
 ### The Custom Inventory Rule
 
-1. In the K100 Dashboard, now go to _Inventory_ section, then go to _Software_  and create a **new Software entry** (_Choose Action / New_)
+1. In the K100 Dashboard, now go to _Inventory_ section, then go to _Software_ and create a **new Software entry** (_Choose Action / New_)
 
-2. Name the rule as your wish (for example: IT Dep - Check Smart Card Reader) and follow these steps:
+2. Name the rule as your wish (for example: IT Dep — Check Smart Card Reader) and follow these steps:
 
 * Publisher: **IT Department** (it's useful for further searches into the _Software Inventory_)
 * Supported Operating Systems: **All the Windows OSs in your Inventory**
@@ -78,9 +77,9 @@ Here's the summary image
 
 ![Screenshot 1](assets/screenshot2.png)
 
-Now we need all our devices complete their inventory. The new Custom Inventory Rule creates a new entry in every device record managed by the K1000. 
+Now we need all our devices complete their inventory. The new Custom Inventory Rule creates a new entry in every device record managed by the K1000.
 
-If a smart card reader has been discovered we'll have at least one "DeviceClass: SMARTCARDREADER" text iside the **Custom Inventory Fields** section into every device record in _Inventory / Devices_
+If a smart card reader has been discovered we'll have at least one “DeviceClass: SMARTCARDREADER” text iside the **Custom Inventory Fields** section into every device record in _Inventory / Devices_
 
 ![Screenhot 3](assets/screenshot3.png)
 
@@ -114,5 +113,4 @@ Delete the default filter and create this:
 
 ![Filter](assets/report1.png)
 
-and **Save** your new report.
-
+**Save** your new report and try it.
